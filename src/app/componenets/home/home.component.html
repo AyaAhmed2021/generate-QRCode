@@ -1,24 +1,19 @@
 <div class="container">
   <h1 class="text-center text-capitalize">generate your QR CODE</h1>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="form">
-    <input class="w-75 p-2 m-5 rounded" formControlName="urlInput">
-    <button class="btn btn-primary p-2">generate</button>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="form" class="d-flex justify-content-between m-5">
+    <input class="col-9 p-2 rounded" formControlName="urlInput" placeholder="paste your url">
+    <button class="btn btn-primary p-2 formButton"
+    [disabled]="form.invalid">generate</button>
   </form>
-
-  <div class="w-100 m-auto" *ngIf="inputValue">
-    <div class="card rounded" style="width: 18rem;">
+    <div class="card rounded" *ngIf="inputValue">
       <div class="text-center mt-3">
 
         <qrcode [qrdata]="inputValue" [width]="250" [errorCorrectionLevel]="'M'" ></qrcode>
 
       </div>
       <div class="card-body">
-        <h3 class="text-capitalize">improve your skills</h3>
+        <h3 class="text-capitalize text-center">improve your skills</h3>
         <p class="card-text text-center">enjoy with us</p>
       </div>
     </div>
-  </div>
-
-
-
 </div>

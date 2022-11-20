@@ -1,9 +1,40 @@
-.qr{
-  border: 5px solid #000;
-  border-radius: 5px;
+
+@media(min-width:767px){
+  .card{
+  width: 50%;
+  margin-inline: auto;
+}
+
+@media (min-width:767) {
+  form {
+    max-width: 80%;
+  }
+  /* .card{
+    width: 50%;
+    margin-inline: auto;
+  } */
 
 }
 
-.card{
-  margin-left: 45%;
+.formButton{
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+}
+
+
+
+
+@media (min-width:300 )and(max-width:766) {
+  body{
+    overflow: hidden;
+  }
+  form{
+    max-width: 50% !important;
+  }
+  .formButton {
+    flex: 0 0 auto;
+    min-width: 50%;
+  }
+
 }
